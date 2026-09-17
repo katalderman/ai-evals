@@ -7,8 +7,12 @@ Thumbs.db
 # Secrets — never commit API keys
 .env
 .env.*
+!.env.example
 *.key
 
 # Local exports / datasets you don't want public yet
 *.local.json
 *.local.csv
+
+# Ignore generated documentation content
+/docs/
