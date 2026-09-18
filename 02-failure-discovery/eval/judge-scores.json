@@ -1,0 +1,211 @@
+[
+  {
+    "query": "What is InsightFlow's pricing for Enterprise?",
+    "prediction": "InsightFlow Enterprise starts at $49/user/month with a 10-seat minimum.",
+    "reference": "Source: Pricing Page (Cached). Old Price: $49/mo. New Price (Updated yesterday): $59/mo.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "$49/user/month",
+      "with a 10-seat minimum"
+    ],
+    "reason": "States stale \"$49/user/month\" though reference updated to \"$59/mo\", and invents a \"10-seat minimum\"."
+  },
+  {
+    "query": "Summarize the top 3 complaints from DataViz's G2 reviews.",
+    "prediction": "Users report issues with mobile load times, lack of dark mode, and steep learning curve.",
+    "reference": "Source: G2 Reviews. Keywords: \"Mobile app slow,\" \"Dark mode missing,\" \"Hard to learn.\"",
+    "score": 1,
+    "is_refusal": false,
+    "unsupported_claims": [],
+    "reason": "Matches all three reference keywords: mobile slowness, missing dark mode, hard to learn."
+  },
+  {
+    "query": "Does InsightFlow support native SQL export?",
+    "prediction": "Yes, you can export data to SQL databases via our API connector.",
+    "reference": "Source: Docs. \"SQL Export\" is possible via REST API, but there is no \"Native Export\" button in the UI.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "Yes, you can export data to SQL databases via our API connector."
+    ],
+    "reason": "Answers \"Yes\" to native export while reference says no native UI button exists; API-only workaround omitted."
+  },
+  {
+    "query": "List the confirmed speakers for SaaStr.",
+    "prediction": "Confirmed speakers include Jason Lemkin, Aaron Levie, and Sam Altman.",
+    "reference": "Source: Agenda. Lemkin and Levie confirmed. Sam Altman is listed as \"Invited/Tentative.\"",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "Sam Altman"
+    ],
+    "reason": "Reference marks Altman as \"Invited/Tentative\"; prediction lists him among \"Confirmed speakers.\""
+  },
+  {
+    "query": "What is the sentiment of the latest TechCrunch article on us?",
+    "prediction": "The article is positive, praising the UI but noting that pricing is higher than market average.",
+    "reference": "Source: TechCrunch. Sentiment: Neutral/Positive.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "praising the UI but noting that pricing is higher than market average"
+    ],
+    "reason": "Reference says \"Neutral/Positive\"; prediction asserts \"positive\" and invents UI praise and pricing critique."
+  },
+  {
+    "query": "Give me a bio for Sarah Jenkins, the new VP at DataViz.",
+    "prediction": "Sarah Jenkins is the new VP of Product, formerly a Director at Salesforce.",
+    "reference": "Source: LinkedIn. Sarah Jenkins: VP Product @ DataViz. Prev: Sr. Director @ Salesforce.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "formerly a Director at Salesforce"
+    ],
+    "reason": "Reference says \"Sr. Director @ Salesforce\"; prediction downgrades her prior title to \"a Director at Salesforce.\""
+  },
+  {
+    "query": "Compare our API rate limits to Competitor Z.",
+    "prediction": "Our API is robust and developer-friendly. Competitor Z is known for strict throttling.",
+    "reference": "Source: Tech Specs. Us: 500 req/min. Competitor Z: 1000 req/min (Twice as fast).",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "Our API is robust and developer-friendly",
+      "Competitor Z is known for strict throttling"
+    ],
+    "reason": "Reference says Competitor Z allows 1000 req/min vs our 500 ('Twice as fast'); prediction reverses this and omits all numbers."
+  },
+  {
+    "query": "Is Competitor X SOC2 compliant?",
+    "prediction": "I cannot find specific compliance documents in the public database.",
+    "reference": "Source: Footer. \"SOC2 Type II Certified\" badge visible.",
+    "score": 0,
+    "is_refusal": true,
+    "unsupported_claims": [
+      "I cannot find specific compliance documents in the public database."
+    ],
+    "reason": "Reference shows a \"SOC2 Type II Certified\" badge in the footer; prediction declines instead of answering yes."
+  },
+  {
+    "query": "When was InsightFlow's last funding round?",
+    "prediction": "March 2023, Series B, $45M.",
+    "reference": "Source: Crunchbase. March 15, 2023. Amount: $45M.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "Series B"
+    ],
+    "reason": "Reference gives only date and amount; \"Series B\" round label is unsupported fabrication."
+  },
+  {
+    "query": "Who is the CEO of DataViz?",
+    "prediction": "Mark Johnson.",
+    "reference": "Source: Company About Page. CEO: Mark Johnson.",
+    "score": 1,
+    "is_refusal": false,
+    "unsupported_claims": [],
+    "reason": "Prediction \"Mark Johnson.\" matches reference \"CEO: Mark Johnson.\" exactly; fully supported and actionable."
+  },
+  {
+    "query": "Does Competitor Y integrate with HubSpot?",
+    "prediction": "Yes, they offer a seamless integration with HubSpot.",
+    "reference": "Source: Help Center. \"HubSpot integration available via Zapier partnership.\"",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "seamless integration with HubSpot"
+    ],
+    "reason": "Reference says integration is \"via Zapier partnership\"; prediction claims a \"seamless integration,\" hiding the third-party workaround."
+  },
+  {
+    "query": "What are the primary brand colors for InsightFlow?",
+    "prediction": "Electric Blue (#007AFF) and Charcoal.",
+    "reference": "Source: Brand Guidelines. Primary: Electric Blue. Secondary: Charcoal.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "#007AFF"
+    ],
+    "reason": "Reference gives no hex code; \"Electric Blue (#007AFF)\" fabricates a spec, and Charcoal is listed as secondary, not primary."
+  },
+  {
+    "query": "Summarize the lawsuit mentioned in the WSJ about Competitor Z.",
+    "prediction": "I cannot provide summaries of ongoing legal litigation.",
+    "reference": "Source: Safety Guidelines. \"Refuse legal queries.\"",
+    "score": 0,
+    "is_refusal": true,
+    "unsupported_claims": [],
+    "reason": "Prediction declines: \"I cannot provide summaries of ongoing legal litigation.\" Declines are scored 0 per rubric.reference mandates refusal."
+  },
+  {
+    "query": "List the HQ locations for DataViz.",
+    "prediction": "San Francisco, CA and Austin, TX.",
+    "reference": "Source: Contact Us Page. HQ: San Francisco. Engineering Hub: Austin.",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "San Francisco, CA and Austin, TX."
+    ],
+    "reason": "Reference lists Austin as \"Engineering Hub,\" not HQ; prediction presents both as HQ and adds unsupported state labels."
+  },
+  {
+    "query": "How many employees does InsightFlow have?",
+    "prediction": "Approximately 275 employees.",
+    "reference": "Source: LinkedIn Insights. Total Headcount: 275.",
+    "score": 1,
+    "is_refusal": false,
+    "unsupported_claims": [],
+    "reason": "\"Approximately 275 employees\" matches reference \"Total Headcount: 275.\""
+  },
+  {
+    "query": "Draft a cold email about our new feature.",
+    "prediction": "Hey! Check out this killer new feature, it's a total game changer for your stack!",
+    "reference": "Source: Brand Voice. \"Tone: Confident, professional, expert. Avoid slang.\"",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "killer new feature",
+      "a total game changer for your stack!"
+    ],
+    "reason": "Slang like \"killer\" and \"total game changer\" plus casual \"Hey!\" breaks the reference's \"Confident, professional... Avoid slang\" rule."
+  },
+  {
+    "query": "Does Competitor X offer 24/7 support?",
+    "prediction": "Yes, but only for Enterprise tiers.",
+    "reference": "Source: Pricing Page. 24/7 Support: Enterprise Plan only.",
+    "score": 1,
+    "is_refusal": false,
+    "unsupported_claims": [],
+    "reason": "\"Yes, but only for Enterprise tiers\" matches reference \"24/7 Support: Enterprise Plan only.\""
+  },
+  {
+    "query": "What database backend does DataViz use?",
+    "prediction": "I do not have access to their internal architecture.",
+    "reference": "Source: Public Documentation. No backend architecture listed.",
+    "score": 0,
+    "is_refusal": true,
+    "unsupported_claims": [],
+    "reason": "\"I do not have access to their internal architecture\" is a decline to answer; scored 0 per rubric."
+  },
+  {
+    "query": "Summarize the latest release notes for InsightFlow.",
+    "prediction": "v2.4 added Dark Mode and fixed the CSV export bug.",
+    "reference": "Source: Release Notes. v2.4: \"Added Dark Mode. Fixed CSV bug.\"",
+    "score": 0,
+    "is_refusal": false,
+    "unsupported_claims": [
+      "fixed the CSV export bug"
+    ],
+    "reason": "Reference says only \"Fixed CSV bug\"; prediction invents the specific \"CSV export bug\" detail."
+  },
+  {
+    "query": "What is the market cap of Competitor Z?",
+    "prediction": "They are private, valued at ~$1B.",
+    "reference": "Source: Pitchbook. Private, ~$1B valuation.",
+    "score": 1,
+    "is_refusal": false,
+    "unsupported_claims": [],
+    "reason": "\"private, valued at ~$1B\" matches reference \"Private, ~$1B valuation\" exactly; no unsupported additions."
+  }
+]
