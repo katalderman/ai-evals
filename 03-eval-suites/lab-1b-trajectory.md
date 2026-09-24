@@ -29,7 +29,7 @@ Unordered match: **3 of 5** golden tools present; `get_ingestion_status` and `co
 |---|---|---|
 | Tool selection | FAIL | Invoked unapproved `search_web` and missed the critical diagnostic calls `get_ingestion_status` and `compare_weeks`. |
 | Argument correctness | PASS | Arguments used in the account query were accurate. |
-| No redundant / looping steps | FAIL | Any identical call repeat is waste because it adds latency and compute cost. |
+| No redundant / looping steps | FAIL | Any identical call repeat is waste: it burns compute and tokens for zero new information. Worse, calling `get_usage` twice with the same arguments proves the agent is failing to track its own state and progress through the plan. That is a trust problem, not a speed problem (M1: trust trumps speed). |
 | Recovery | FAIL | When `search_web` returned generic external text instead of diagnostic telemetry, the agent did not recover or fall back to check ingestion tables. |
 | Plan coherence | FAIL | The agent broke the intended workflow by drafting a reply before verifying or comparing data. |
 | Task completion | FAIL | The true root cause was never determined, leaving the diagnosis unverified. |
