@@ -18,7 +18,7 @@ Taxonomy rank #1, **Stale Retrieval**, audit row 1 (`02-failure-discovery/audit-
 |---|---|---|---|
 | **Layer 1 · Code** | Deterministic compliance (numeric grounding + brand-voice regex) | 1 | L1a numeric grounding fired on `10` ("10-seat minimum") not in reference. **Did not fire on `$49`**: that figure is in the reference, as the *Old* price. |
 | **Layer 2 · Safety** | Mandated-refusal / confidential-leak gate | 0 | Not a refusal-mandated query and no leak: nothing for the gate to catch. |
-| **Layer 3 · Judge** | Semantic grounding (LLM-as-Judge) | 1 | FAIL: *States stale "$49/user/month" when reference says new price is $59/mo; "10-seat minimum" unsupported.* Unsupported claims: `"starts at $49/user/month"`, `"with a 10-seat minimum"`. |
+| **Layer 3 · Judge** | Semantic grounding (LLM-as-Judge) | 1 | FAIL: *States stale "$49/user/month" though reference updated price to $59/mo; "10-seat minimum" unsupported.* Unsupported claims: `"$49/user/month"`, `"with a 10-seat minimum"`. (Verdict stable across three re-runs; only the wording varies.) |
 
 **Context, cheap layers across all 20 M2 rows:** Layers 1 + 2 caught **3 / 13** confirmed failures (rows 1, 12, 16) with **0** false alarms on passes. And on row 1 the hit is the seat minimum, not the price.
 

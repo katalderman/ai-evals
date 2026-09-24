@@ -30,11 +30,11 @@
       "score": 1,
       "judge_verdict": "FAIL",
       "unsupported_claims": [
-        "starts at $49/user/month",
+        "$49/user/month",
         "with a 10-seat minimum"
       ],
       "is_refusal": false,
-      "reason": "States stale \"$49/user/month\" when reference says new price is $59/mo; \"10-seat minimum\" unsupported."
+      "reason": "States stale \"$49/user/month\" though reference updated price to $59/mo; \"10-seat minimum\" unsupported."
     }
   },
   "cheap_layers_all_rows": [
