@@ -1,0 +1,7 @@
+anthropic
+openai
+python-dotenv
+pydantic
+jupyter
+nbconvert
+ipykernel
